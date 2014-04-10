@@ -1,0 +1,6 @@
+<h1>{{{title}}}{{#if user.name.full}}, {{{user.name.full}}}{{/if}}</h1>
+{{#unless user}}
+<a href="/login">Log In</a>
+{{else}}
+<a href="/logout">Log Out</a>
+{{/unless}}

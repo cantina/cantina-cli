@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+var mkdirp = require('mkdirp').sync
+  , path = require('path');
+
+var skel = path.resolve(__dirname, '../skel');
+
+// Create skeleton directory layout otherwise empty directories will be missing
+[ 'controllers', 'etc', 'middleware', 'public', 'test', 'views' ].forEach(function (dir) {
+  mkdirp(path.resolve(skel, dir));
+});
