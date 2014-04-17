@@ -14,9 +14,9 @@
     "cantina-auth": "cantina/cantina-auth#3.x",
     "cantina-email": "cantina/cantina-email#3.x",
     "cantina-tokens": "cantina/cantina-tokens#3.x",
-    "cantina-models-schemas": "cantina/cantina-models-schemas#master",
-    "cantina-app-users": "cantina/cantina-app-users#develop",
-    "cantina-app-ui-users": "cantina/cantina-app-ui-users#master",
+    "cantina-models-schemas": "cantina/cantina-models-schemas#3.x",
+    "cantina-app-users": "cantina/cantina-app-users#3.x",
+    "cantina-app-ui-users": "cantina/cantina-app-ui-users#3.x",
     "idgen": "~1.3.0",
     "underscore": "1.6.0"
   },
