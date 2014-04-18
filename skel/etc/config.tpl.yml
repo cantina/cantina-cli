@@ -1,0 +1,21 @@
+site:
+  domain: localhost:3000
+  protocol: http
+amino:
+  service:
+    name: cantina-app-{{dirname}}
+    port: 3000
+redis:
+  prefix: cantina-app-{{dirname}}
+mongo:
+  db: cantina-app-{{dirname}}
+log:
+  trace: true
+  req:
+    enable: true
+network:
+  domain: localhost
+repl:
+  enable: true
+  options:
+    prompt: "{{dirname}}> "
