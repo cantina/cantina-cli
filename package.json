@@ -1,25 +1,25 @@
 {
-  "name": "cantina-app",
+  "name": "cantina-init-cli",
   "version": "0.0.0",
-  "description": "cantina-app ===========",
-  "main": "cantina-app.js",
+  "description": "Initialize a directory for a new cantina app",
+  "private": true,
+  "main": "cantina-init-cli.js",
   "scripts": {
-    "test": "make test",
-    "postinstall": "./bin/postinstall"
+    "test": "make test"
   },
   "bin": {
-    "cantina-app": "./bin/cantina-app"
+    "cantina": "./bin/cantina-init-cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cantina/cantina-app.git"
+    "url": "git://github.com/cantina/cantina-init-cli.git"
   },
   "author": "",
   "license": "none",
   "bugs": {
-    "url": "https://github.com/cantina/cantina-app/issues"
+    "url": "https://github.com/cantina/cantina-init-cli/issues"
   },
-  "homepage": "https://github.com/cantina/cantina-app",
+  "homepage": "https://github.com/cantina/cantina-init-cli",
   "dependencies": {
     "mkdirp": "^0.3.5",
     "hardhat": "^0.0.7",
