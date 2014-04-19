@@ -1,28 +1,45 @@
 #!/usr/bin/env node
-var fs = require('fs')
-  , path = require('path')
-  , hardhat = require('hardhat');
 
+var path = require('path')
+  , cwd = process.cwd()
+  , npm = require('npm');
 
-var cwd = process.cwd()
-  , skel = path.resolve(__dirname, '../skel')
-  , dirname = cwd.split(path.sep).pop();
-
-if (!fs.existsSync(path.resolve(cwd, 'package.json'))) {
-  fs.writeFileSync(path.resolve(cwd, 'package.json'), fs.readFileSync(path.resolve(skel, 'package.json')));
+if (cwd === path.resolve(__dirname, '../')) {
+  console.error(path.basename(process.argv[1]) + ': must be run in an empty directory');
+  process.exit(65);
 }
-if (!fs.existsSync(path.resolve(cwd, dirname + '.js'))) {
-  fs.writeFileSync(path.resolve(cwd, dirname + '.js'), fs.readFileSync(path.resolve(skel, 'app.js')));
-  if (!fs.existsSync(path.resolve(cwd, 'app.js'))) {
-    fs.symlinkSync(dirname + '.js', path.resolve(cwd, 'app.js'));
+
+var promptForDeps = require('../prompt-for-deps');
+var initPackageJson = require('../init-package-json');
+var copySkel = require('../copy-skel');
+
+console.log('');
+// 1. Prompt for desired cantina plugins
+promptForDeps(function (err, results) {
+  var plugins = [];
+  if (err) return die(err);
+  console.log('');
+  if (results.dependencies) {
+    plugins = Object.keys(results.dependencies);
   }
-}
-hardhat.scaffold(skel, cwd, {
-  match: function (src) { return !src.match(/skel\/(?:app\.js|package\.json)$/); },
-  data: {
-    dirname: dirname
-  }
-}, function (err) {
-  if (err) console.error(err);
-  process.exit(err ? 1 : 0);
+  // 2. Create package.json
+  initPackageJson(path.resolve(cwd, 'package.json'), results, function (err, data) {
+    if (err) return die(err);
+    // No data means we aborted
+    if (!data) die();
+    // 3. Copy skeleton directories
+    copySkel({ main: data.main, plugins: plugins }, function (err) {
+      if (err) return die(err);
+      // 4. `npm install`
+      npm.load({}, function (err) {
+        if (err) return die(err);
+        npm.commands.install(die);
+      });
+    });
+  });
 });
+
+function die (err) {
+  if (err) throw err;
+  process.exit(0);
+}
