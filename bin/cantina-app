@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs')
   , path = require('path')
-  , ncp = require('ncp');
+  , hardhat = require('hardhat');
 
 
 var cwd = process.cwd()
@@ -17,8 +17,11 @@ if (!fs.existsSync(path.resolve(cwd, dirname + '.js'))) {
     fs.symlinkSync(dirname + '.js', path.resolve(cwd, 'app.js'));
   }
 }
-ncp(skel, cwd, {
-  filter: function (src) { return !src.match(/skel\/(?:app\.js|package\.json)$/); }
+hardhat.scaffold(skel, cwd, {
+  match: function (src) { return !src.match(/skel\/(?:app\.js|package\.json)$/); },
+  data: {
+    dirname: dirname
+  }
 }, function (err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
