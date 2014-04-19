@@ -19,16 +19,9 @@ app.boot(function(err) {
     }
   });
 
-  // Web stack. (Also loads local plugins and middleware).
-  require('cantina-web');
-
-  // External plugins
-  require('cantina-amino');
-  require('cantina-redis');
-  require('cantina-models');
-  require('cantina-validators');
-  require('cantina-app-users');
-  require('cantina-app-ui-users');
+  {{#each plugins}}
+  require('{{this}}');
+  {{/each}}
 
   app.start();
 });
