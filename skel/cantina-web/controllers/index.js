@@ -1,10 +1,11 @@
 var app = require('cantina')
-  , controller = module.exports = app.controller();
+  , controller = module.exports = app.controller()
+  , conf = app.conf.get('site');
 
 controller.get(['/'], index);
 
 function index (req, res, next) {
-  res.vars.title = 'Welcome';
+  res.vars.title = conf.title;
   res.vars.user = req.user;
   res.render('home', res.vars);
 }

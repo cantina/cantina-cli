@@ -3,13 +3,11 @@ var app = require('cantina');
 app.boot(function(err) {
   if (err) throw err;
 
-  {{#if cantina-log}}
   // Logging
   require('cantina-log');
   if (!app.conf.get('test')) {
     app.log.replaceConsole();
   }
-  {{/if}}
 
   // Error handler.
   app.on('error', function (err) {
@@ -22,7 +20,7 @@ app.boot(function(err) {
   });
 
   {{#each plugins}}
-  require({{this}});
+  require('{{this}}');
   {{/each}}
 
   app.start();
