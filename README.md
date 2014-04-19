@@ -3,8 +3,8 @@ cantina-init-cli
 Initialize a directory for a new [cantina](https://github.com/cantina/cantina) app.
 
 - Prompts for optional components
-- Creates directory structure
 - Interactively creates initial package.json
+- Creates directory structure
 - Performs `npm install`
 
 Usage
