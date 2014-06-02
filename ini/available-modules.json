@@ -32,6 +32,7 @@
       "cantina-auth": "cantina/cantina-auth#3.x",
       "cantina-email": "cantina/cantina-email#3.x",
       "cantina-models": "cantina/cantina-models#3.1.x",
+      "cantina-models-mongo": "cantina/cantina-models-mongo#3.x",
       "cantina-models-schemas": "cantina/cantina-models-schemas#3.x",
       "cantina-mongo": "cantina/cantina-mongo#3.x",
       "cantina-permissions": "cantina/cantina-permissions#3.x",
