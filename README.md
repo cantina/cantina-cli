@@ -1,4 +1,4 @@
-cantina-init-cli
+cantina-cli
 ================
 Initialize a directory for a new [cantina](https://github.com/cantina/cantina) app.
 
@@ -11,7 +11,7 @@ Usage
 =====
 
 ```sh
-$ npm install -g cantina/cantina-init-cli#master
+$ npm install -g cantina/cantina-cli#master
 $ mkdir new-project
 $ cd new-project
 $ cantina
