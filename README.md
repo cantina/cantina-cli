@@ -14,6 +14,6 @@ Usage
 $ npm install -g cantina/cantina-cli#master
 $ mkdir new-project
 $ cd new-project
-$ cantina
+$ cantina init
 $ node app.js
 ```
