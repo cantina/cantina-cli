@@ -1,6 +1,6 @@
 {
   "name": "cantina-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Initialize a directory for a new cantina app",
   "private": true,
   "main": "cantina-cli.js",
