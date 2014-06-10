@@ -1,6 +1,6 @@
 var app = require('cantina')
   , controller = module.exports = app.controller()
-  , conf = app.conf.get('site');
+  , conf = app.conf.get('app');
 
 controller.get(['/'], index);
 
