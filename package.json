@@ -1,8 +1,10 @@
 {
   "name": "cantina-cli",
-  "version": "0.1.0",
   "description": "Initialize a directory for a new cantina app",
-  "private": true,
+  "version": "0.2.0",
+  "publishConfig": {
+    "registry": "https://npm-registry.terraeclipse.com"
+  },
   "main": "cantina-cli.js",
   "scripts": {
     "test": "make test"
