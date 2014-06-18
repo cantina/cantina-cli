@@ -46,7 +46,7 @@ function init () {
       copySkel({ main: data.main, plugins: plugins }, function (err) {
         if (err) return die(err);
         // 4. `npm install`
-        npm.load({}, function (err) {
+        npm.load({userconfig: '~/.npmrc-te'}, function (err) {
           if (err) return die(err);
           npm.commands.install(die);
         });
