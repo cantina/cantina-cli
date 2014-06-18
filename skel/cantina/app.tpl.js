@@ -19,9 +19,11 @@ app.boot(function(err) {
     }
   });
 
-  {{#each plugins}}
-  require('{{this}}');
+  {{#each plugins}}require('{{this}}');
   {{/each}}
+
+  {{#if cantina-web}}app.load('web');
+  {{/if}}
 
   app.start();
 });
