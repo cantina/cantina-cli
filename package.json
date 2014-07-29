@@ -1,7 +1,7 @@
 {
   "name": "cantina-cli",
   "description": "Initialize a directory for a new cantina app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publishConfig": {
     "registry": "https://npm-registry.terraeclipse.com"
   },
