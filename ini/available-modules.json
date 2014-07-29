@@ -1,8 +1,8 @@
 {
   "cantina": {
     "dependencies": {
-      "cantina": "~4.0.0",
-      "cantina-log": "~4.0.0"
+      "cantina": "~4.1.0",
+      "cantina-log": "~4.1.0"
     },
     "devDependencies": {
       "mocha": "^1.18.2"
@@ -13,7 +13,7 @@
       "cantina"
     ],
     "dependencies": {
-      "cantina-amino": "~4.0.0"
+      "cantina-amino": "~4.1.0"
     }
   },
   "cantina-web": {
@@ -21,7 +21,7 @@
       "cantina"
     ],
     "dependencies": {
-      "cantina-web": "~4.0.0"
+      "cantina-web": "~4.1.0"
     }
   },
   "cantina-app-users": {
@@ -29,18 +29,18 @@
       "cantina", "cantina-web"
     ],
     "dependencies": {
-      "cantina-auth": "~4.0.0",
-      "cantina-email": "~4.0.0",
-      "cantina-models": "~4.0.0",
-      "cantina-models-mongo": "~4.0.0",
-      "cantina-models-schemas": "~4.0.0",
-      "cantina-mongo": "~4.0.0",
-      "cantina-permissions": "~4.0.0",
-      "cantina-redis": "~4.0.0",
-      "cantina-session": "~4.0.0",
-      "cantina-tokens": "~4.0.0",
-      "cantina-validators": "~4.0.0",
-      "cantina-app-users": "~4.0.0"
+      "cantina-auth": "~4.1.0",
+      "cantina-email": "~4.1.0",
+      "cantina-models": "~4.1.0",
+      "cantina-models-mongo": "~4.1.0",
+      "cantina-models-schemas": "~4.1.0",
+      "cantina-mongo": "~4.1.0",
+      "cantina-permissions": "~4.1.0",
+      "cantina-redis": "~4.1.0",
+      "cantina-session": "~4.1.0",
+      "cantina-tokens": "~4.1.0",
+      "cantina-validators": "~4.1.0",
+      "cantina-app-users": "~4.1.0"
     }
   },
   "cantina-app-ui-users": {
@@ -48,7 +48,7 @@
       "cantina", "cantina-web", "cantina-app-users"
     ],
     "dependencies": {
-      "cantina-app-ui-users": "~4.0.0"
+      "cantina-app-ui-users": "~4.1.0"
     }
   }
 }

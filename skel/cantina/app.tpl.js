@@ -1,10 +1,10 @@
-var app = require('cantina');
+var app = require('cantina').createApp();
 
 app.boot(function(err) {
   if (err) throw err;
 
   // Logging
-  require('cantina-log');
+  app.require('cantina-log');
   if (!app.conf.get('test')) {
     app.log.replaceConsole();
   }
@@ -19,7 +19,7 @@ app.boot(function(err) {
     }
   });
 
-  {{#each plugins}}require('{{this}}');
+  {{#each plugins}}app.require('{{this}}');
   {{/each}}
 
   {{#if cantina-web}}app.load('web');
