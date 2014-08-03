@@ -2,9 +2,6 @@
   "name": "cantina-cli",
   "description": "Initialize a directory for a new cantina app",
   "version": "0.3.0",
-  "publishConfig": {
-    "registry": "https://npm-registry.terraeclipse.com"
-  },
   "main": "cantina-cli.js",
   "scripts": {
     "test": "make test"
@@ -16,8 +13,13 @@
     "type": "git",
     "url": "git://github.com/cantina/cantina-cli.git"
   },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
   "author": "",
-  "license": "none",
   "bugs": {
     "url": "https://github.com/cantina/cantina-cli/issues"
   },
